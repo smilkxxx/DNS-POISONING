@@ -114,7 +114,7 @@ Antes del ataque — ARP envenenada, tabla mostrando MAC del atacante
 
 La víctima resuelve tanto 20.21.11.50 como 20.21.11.1 con la misma MAC del atacante (0c:1a:c0:b5:00:00), confirmando que el ARP Spoofing fue exitoso y el atacante está en el medio.
 
-![Antes](dns durante1.png)
+![Antes](dnsantes.png)
 
 
 arp -n en la víctima muestra que 20.21.11.1 (el gateway) tiene la misma MAC que 20.21.11.50 (el atacante). El ataque MitM está activo. Al hacer curl http://itla.edu.do se obtiene el HTML del sitio falso.
@@ -130,7 +130,7 @@ sudo python3 02_arp_mitm.py eth0
 # Terminal 2 — DNS Poisoning
 sudo python3 dnspoisoning.py eth0 20.21.11.50
 
-![Durante](dns durante2.png)
+![Durante](dnsdurante.png)
 
 
 El script muestra [SPOOFED] para cada consulta DNS interceptada. Se observan 186 queries interceptadas y 186 respuestas falsas enviadas, todas redirigiendo a 20.21.11.50. El dominio itla.edu.do fue spoofed exitosamente.
@@ -145,7 +145,7 @@ sudo arp -d 20.21.11.50
 sudo arp -d 20.21.11.1
 sudo ip neigh flush all
 
-![Despues](dns despues.png)
+![Despues](dnsdespues.png)
 
 
 Después de limpiar el ARP y aplicar las contramedidas, curl http://itla.edu.do recibe respuesta 301 Moved Permanently de Cloudflare — la IP real del sitio legítimo. El ataque fue bloqueado.
