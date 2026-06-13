@@ -74,7 +74,11 @@ Documentación de la Red
 
 Direccionamiento IP
 
-DispositivoInterfazIPMACRolRouter-AlvaroGi0/120.21.11.10cf3.0eaa.0001Gateway / DNSIOU2Et0/0——SwitchAttack (Kali)Eth020.21.11.500c1a.c0b5.0000AtacanteVictima (Kali)Eth020.21.11.520cb2.0846.0000Víctima
+DispositivoInterfazIPMACRol
+Router-Alvaro | Gi0/1 | 20.21.11.1 | 0cf3.0eaa.0001 | Gateway / DNS
+IOU2 Et0/0 | Switch 
+(Kali)Eth020.21.11.50 | 0c1a.c0b5.0000 | Atacante
+(Kali)Eth020.21.11.52 | 0cb2.0846.0000 | Víctima
 
 
 Funcionamiento del Ataque
