@@ -67,7 +67,7 @@ sudo apt install python3-scapy -y
 
 Documentación de la Red
 
-Topología
+![Topologia](topología.png)
 
                     Router-Alvaro
                     (20.21.11.1)
